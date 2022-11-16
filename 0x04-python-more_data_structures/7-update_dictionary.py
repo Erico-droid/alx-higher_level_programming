@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 def update_dictionary(a_dictionary, key, value):
-    if a_dictionary is not None:
-        dic2 = {key: value}
-        a_dictionary.update(dic2)
-        return(a_dictionary)
+    if key not in a_dictionary:
+        a_dictionary[key] = value
     else:
-        return None
-
-# creates if non-existent; updates even if exists
-# return a_dictionary[key] = value
+        for k in a_dictionary:
+            if k == key:
+                a_dictionary[k] = value
+    return a_dictionary
