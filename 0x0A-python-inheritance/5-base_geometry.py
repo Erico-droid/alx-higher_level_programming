@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-"""Task5-base_geometry.
-Creates an empty class."""
+"""Defines an empty class BaseGeometry."""
 
 
 class BaseGeometry:
-    """Empty class."""
-
+    """Represent base geometry"""
     pass

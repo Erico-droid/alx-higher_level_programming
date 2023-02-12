@@ -1,12 +1,12 @@
 #!/usr/bin/node
 
-const url = process.argv[2];
 const request = require('request');
+const url = process.argv[2];
 
-request(url, (err, response) => {
-  if (err) {
-    console.log(err);
+request.get(url, (error, response) => {
+  if (error) {
+    console.log(error);
   } else {
-    console.log('code: ' + response.statusCode);
+    console.log(`code: ${response.statusCode}`);
   }
 });

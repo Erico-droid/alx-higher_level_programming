@@ -1,1 +1,3 @@
-this is an import python module folder
+## 0x02. Python - import & modules
+
+This directory contains projects on Python modules and imports.

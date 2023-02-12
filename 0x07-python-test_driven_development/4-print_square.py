@@ -1,21 +1,20 @@
 #!/usr/bin/python3
-"""
-Module 4-print_square
-Contains method that prints square with #'s
-Takes in an int size
-"""
+"""Module containing a function that prints a square"""
 
 
 def print_square(size):
+    """ adds integers
+        Arguments:
+            @size: size of the square
     """
-    Prints square with #'s given int size
-    """
-    if not isinstance(size, int):
-        raise TypeError("size must be an integer")
-    if size < 0:
-        raise ValueError("size must be >= 0")
 
+    if type(size) is not int:
+        raise TypeError("size must be an integer")
+    if (size < 0):
+        raise ValueError("size must be >= 0")
     if size == 0:
-        print("", end="")
-    else:
-        print("\n".join(["#" * size for rows in range(size)]))
+        return
+    for i in range(size):
+        for j in range(size):
+            print("#", end="")
+        print()

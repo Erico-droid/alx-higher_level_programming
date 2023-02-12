@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    import sys
+    from sys import argv
+    length = len(argv) - 1
     result = 0
-    for i in range(1, len(sys.argv)):
-        result += int(sys.argv[i])
-    print(f"{result}")
+    for num in range(1, length + 1):
+        result = result + int(argv[num])
+    print(result)
