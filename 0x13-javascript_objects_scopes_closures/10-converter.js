@@ -1,7 +1,12 @@
 #!/usr/bin/node
 
+// Converts a number from base 10 to another base
+// with Closure
+
 exports.converter = function (base) {
-  return function (dec) {
-    return dec.toString(base);
-  };
+  function myConverter (n) {
+    return n.toString(base);
+  }
+
+  return myConverter;
 };

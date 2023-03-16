@@ -1,16 +1,26 @@
 #!/usr/bin/node
 
-class Rectangle {
-  constructor (w, h) {
-    if (typeof w === 'number' && w > 0 && typeof h === 'number' && h > 0) {
-      this.width = w;
-      this.height = h;
+// Rotate and Double the width and height
+
+module.exports = class Rectangle {
+  constructor (width, height) {
+    if (typeof width === 'number' && typeof height === 'number' && width > 0 && height > 0) {
+      this.width = width;
+      this.height = height;
     }
   }
 
-  print () {
-    for (let i = 0; i < this.height; i++) {
-      console.log('X'.repeat(this.width));
+  print (char = 'X') {
+    for (let i = 0; i < this.height; ++i) {
+      let j = 0;
+
+      for (; j < this.width; ++j) {
+        process.stdout.write(char);
+      }
+
+      if (j === this.width) {
+        console.log('');
+      }
     }
   }
 
@@ -19,7 +29,7 @@ class Rectangle {
   }
 
   double () {
-    [this.width, this.height] = [this.width * 2, this.height * 2];
+    this.width *= 2;
+    this.height *= 2;
   }
-}
-module.exports = Rectangle;
+};
