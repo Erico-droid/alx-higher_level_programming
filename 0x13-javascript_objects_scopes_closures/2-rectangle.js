@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-//Checks for Rectangle parameters
+// Checks for Rectangle parameters
 
 module.exports = class Rectangle {
   constructor (width, height) {
